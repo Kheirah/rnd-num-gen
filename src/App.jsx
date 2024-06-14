@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [randomNumber, setRandomNumber] = useState(0);
+  const redStyle = randomNumber > 50 ? "red" : "";
 
   function generateRandomNumber() {
     return Math.floor(Math.random() * 100);
@@ -12,8 +13,11 @@ function App() {
     <>
       <h1>Random Number Generator</h1>
       <div className="card">
-        <button onClick={() => setCount(generateRandomNumber())}>
-          Number: {count}
+        <button
+          onClick={() => setRandomNumber(generateRandomNumber())}
+          className={redStyle}
+        >
+          Number: {randomNumber}
         </button>
       </div>
     </>

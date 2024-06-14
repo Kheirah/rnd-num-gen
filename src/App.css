@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.red {
+  background-color: rgb(157, 0, 0);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
